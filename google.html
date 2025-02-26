@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Google搜索,数智搜索,Diglit.cn">
+		<link rel="icon" href="/mly/images/google-color.png">
+		<title>Google 电子书搜索</title>
+		<style type="text/css">
+			body {
+				text-align: center;
+				height: 100%;
+				background-color: #fff;
+			}
+
+			.logo {
+				width: 270px;
+				margin: 9% auto 30px
+			}
+
+			.bt {
+				display: inline-block;
+				color: #5F6368;
+				background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+				background-color: #f2f2f2;
+				border-radius: 5px;
+				height: 40px;
+				line-height: 27px;
+				font-family: Arial, Microsoft YaHei;
+				font-size: 16px;
+				padding: 0 20px;
+				border: none;
+				cursor: pointer;
+				letter-spacing: 1px
+			}
+
+			.bt:hover {
+				box-shadow: 0px 0px 1px #000;
+			}
+
+			.middle a {
+				text-decoration: none;
+				line-height: 40px;
+				margin-left: 10px;
+			}
+
+			input[type=text] {
+				width: 564px;
+				height: 40px;
+				color: #333;
+				padding: 3px 20px;
+				margin-bottom: 30px;
+				border: 1px solid #dfe1e5;
+				border-radius: 30px;
+				font-size: 16px;
+				outline: 0;
+				background-color: #FFF;
+			}
+
+			input[type=text]:hover {
+				box-shadow: 0px 0px 5px #dfe1e5
+			}
+
+			#dlcn-search {
+				display: block;
+				width: 618px;
+				margin: 0 auto 30px;
+			}
+
+			.intro {
+				display: block;
+				width: 572px;
+				margin: 0px auto;
+				color: #607D8B;
+				font-size: 12px;
+				text-align: left;
+				background-color: #f9f9f9;
+				clear: both;
+				border: 1px solid #607D8B;
+				border-radius: 5px;
+				padding: 10px 20px;
+			}
+
+			span.tips {
+				float: right;
+				background-color: #607D8B;
+				color: #ffffff;
+				padding: 2px 5px;
+				margin-top: -10px;
+				border-radius: 0 0 5px 5px;
+			}
+
+			.intro p a {
+				color: #607D8B !important;
+			}
+			.dlcnads {
+			    width: auto;
+			    margin: 20px auto;
+			    display: flex;
+			    justify-content: center;
+			    gap: 20px;
+			}
+			 .dlcnads img {
+			    width: 610px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img class="logo" src="https://s.diglit.cn/mly/images/charles-k-kaos-88th-birthday.gif ">
+		<section class="search" id="dlcn-search">
+			<div class="middle" id="tijiao">
+				<input name="" type="text" id="dlcn" value="" autocomplete="off" autofocus="open">
+				<input class="bt" type="submit" value="Google Search" onclick="dlcn()"> </input>
+				<a class="bt" href="https://www.diglit.cn/" target="_blank">Make every search valuable</a>
+				<script type="text/javascript">
+					function dlcn() {
+						var s = document.getElementById('dlcn').value;
+						window.open("https://www.google.com/search?q=" + s, "_blank");
+					}
+				</script>
+			</div>
+
+		</section>
+		<section class="intro">
+			<span class="tips">Tips</span>
+			<p>请自行解决访问方法。</p>
+			
+		</section>
+<section class="dlcnads">
+		        <a href="https://s.diglit.cn" target="_blank">
+		            <img src="https://s.diglit.cn/mly/images/shuzhisousuo.png">
+		        </a>
+		    </section>
+		<script type="text/javascript">
+			// document.onkeydown=keyDownSearch; 
+			document.getElementById('tijiao').onkeydown = keyDownSearch;
+
+			function keyDownSearch(e) {
+				var theEvent = e || window.event;
+				var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+				if (code == 13) {
+					weibo();
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="数智搜索,DigLit.cn,数智未来">
+		<link rel="icon" href="/mly/images/google-color.png">
+		<title>Google 搜索</title>
+		<style type="text/css">
+			body {
+				text-align: center;
+				height: 100%;
+				background-color: #fff;
+			}
+
+			.logo {
+				width: 270px;
+				margin: 9% auto 30px
+			}
+
+			input[type=submit],
+			input[type=button] {
+				display: inline-block;
+				color: #fff;
+				background-color: #efefef;
+				border-radius: 0px;
+				height: 40px;
+				line-height: 27px;
+				font-family: Arial, Microsoft YaHei;
+				font-size: 16px;
+				padding: 0 20px;
+				border: none;
+				cursor: pointer;
+				letter-spacing: 1px
+			}
+
+			input[type=text] {
+				float: left;
+				width: 500px;
+				height: 32px;
+				color: #333;
+				padding: 3px 10px;
+				margin-bottom: 30px;
+				border: 1px solid #efefef;
+				border-right: 0;
+				font-size: 16px;
+				outline: 0;
+				background-color: #FFF;
+			}
+
+			#dlcn-search {
+				display: block;
+				width: 618px;
+				margin: 0 auto
+			}
+
+			.intro {
+				display: block;
+				width: 572px;
+				margin: 0px auto;
+				color: #607D8B;
+				font-size: 12px;
+				text-align: left;
+				background-color: #f9f9f9;
+				clear: both;
+				border: 1px solid #607D8B;
+				border-radius: 5px;
+				padding: 10px 20px;
+			}
+			
+			span.tips {
+				float: right;
+				background-color: #607D8B;
+				color: #ffffff;
+				padding: 2px 5px;
+				margin-top: -10px;
+				border-radius: 0 0 5px 5px;
+			}
+			
+			.intro p a {
+				color: #607D8B !important;
+			}
+			.dlcnads {
+			    width: auto;
+			    margin: 20px auto;
+			    display: flex;
+			    justify-content: center;
+			    gap: 20px;
+			}
+			 .dlcnads img {
+			    width: 610px;
+			}
+		</style>
+	</head>
+
+	<body>
+	<img class="logo" src="https://s.diglit.cn/mly/images/charles-k-kaos-88th-birthday.gif ">
+		<section class="search" id="dlcn-search">
+			<div class="middle" id="tijiao">
+				<input name="" type="text" id="dlcn" value="" placeholder="Press enter to search on Google"
+					autocomplete="off">
+				<input type="submit" value="Search" onclick="dlcn()"> </input>
+				<script type="text/javascript">
+					function dlcn() {
+						var s = document.getElementById('dlcn').value;
+						window.open("https://www.google.com/search?q=" + s, "_blank");
+					}
+				</script>
+			</div>
+
+		</section>
+		<section class="intro">
+			<span class="tips">Tips</span>
+			<p>✅ “site”——在特定网站或域中搜索 ；例如：site:网址 关键词 或 关键词 site:网址</p>
+			<p>✅（“”）双引号——精确匹配 ；例如：“数智搜索”。</p>
+			<p>✅ “+”加号 —— 强制包含关键词 ；例如：+数字素养+技能+学习。</p>
+			<p>✅ “intitle”——把搜索范围限定在网页标题中 ；例如：intitle:数智标签页。</p>
+		</section>
+		<section class="dlcnads">
+		        <a href="https://s.diglit.cn" target="_blank">
+		            <img src="https://s.diglit.cn/mly/images/shuzhisousuo.png">
+		        </a>
+		    </section>
+		<script type="text/javascript">
+			// document.onkeydown=keyDownSearch; 
+			document.getElementById('tijiao').onkeydown = keyDownSearch;
+
+			function keyDownSearch(e) {
+				var theEvent = e || window.event;
+				var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+				if (code == 13) {
+					dlcn();
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</body>
+</html>

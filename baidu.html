@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="数智搜索,DigLit.cn,数智未来">
+		<link rel="icon" href="/mly/images/baidu-color.png">
+		<title>baidu 搜索</title>
+		<style type="text/css">
+			body {
+				text-align: center;
+				height: 100%;
+				background-color: #fff;
+			}
+
+			.logo {
+				width: 270px;
+				margin: 9% auto 30px
+			}
+
+			input[type=submit],
+			input[type=button] {
+				display: inline-block;
+				color: #fff;
+				background-color: #4569ff;
+				border-radius: 0px;
+				height: 40px;
+				line-height: 27px;
+				font-family: Arial, Microsoft YaHei;
+				font-size: 16px;
+				padding: 0 20px;
+				border: none;
+				cursor: pointer;
+				letter-spacing: 1px
+			}
+
+			input[type=text] {
+				float: left;
+				width: 500px;
+				height: 32px;
+				color: #333;
+				padding: 3px 10px;
+				margin-bottom: 30px;
+				border: 1px solid #4569ff;
+				border-right: 0;
+				font-size: 16px;
+				outline: 0;
+				background-color: #FFF;
+			}
+
+			#dlcn-search {
+				display: block;
+				width: 618px;
+				margin: 0 auto
+			}
+
+			.intro {
+				display: block;
+				width: 572px;
+				margin: 0px auto;
+				color: #607D8B;
+				font-size: 12px;
+				text-align: left;
+				background-color: #f9f9f9;
+				clear: both;
+				border: 1px solid #607D8B;
+				border-radius: 5px;
+				padding: 10px 20px;
+			}
+			
+			span.tips {
+				float: right;
+				background-color: #607D8B;
+				color: #ffffff;
+				padding: 2px 5px;
+				margin-top: -10px;
+				border-radius: 0 0 5px 5px;
+			}
+			
+			.intro p a {
+				color: #607D8B !important;
+			}
+			.dlcnads {
+			    width: auto;
+			    margin: 20px auto;
+			    display: flex;
+			    justify-content: center;
+			    gap: 20px;
+			}
+			 .dlcnads img {
+			    width: 610px;
+			}
+			.new_search_guide_bub {
+			            margin: 35px 0;
+			            font-size: 16px;
+			            display: flex;
+			            justify-content: center;
+			        }
+			        .new_search_guide_bub_container {
+			            display: flex;
+			            align-items: center;
+			            padding: 8px;
+			            background: linear-gradient(0deg, rgba(51, 119, 255, .05), rgba(51, 119, 255, .05)),
+			                        linear-gradient(90deg, rgba(229, 231, 255, .06) -4.77%, rgba(212, 222, 255, .3) 88.06%);
+			            border-radius: 29px;
+			            text-decoration: none;
+			            color: inherit;
+			        }
+		</style>
+	</head>
+
+	<body>
+	<img class="logo" src="https://www.baidu.com/img/flexible/logo/pc/result.png">
+		<section class="search" id="dlcn-search">
+			<div class="middle" id="tijiao">
+				<input name="" type="text" id="dlcn" value="" placeholder="Press Enter to search on Baidu"
+					autocomplete="off">
+				<input type="submit" value="Search" onclick="dlcn()"> </input>
+				<script type="text/javascript">
+					function dlcn() {
+						var s = document.getElementById('dlcn').value;
+						window.open("https://www.baidu.com/s?wd=" + s, "_blank");
+					}
+				</script>
+			</div>
+			
+<div id="s_new_search_guide">
+            <div class="new_search_guide_bub">
+                <a class="new_search_guide_bub_container" href="https://chat.baidu.com/" target="_blank">
+                    <div class="new_search_guide_bub_container_left">
+                        <svg class="search_icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5457 6.01788L14.5487 6.01063L14.5968 5.99121L14.6162 5.98339C14.6713 5.96117 14.7285 5.93807 14.7874 5.91428C14.9255 6.47658 14.9987 7.06437 14.9987 7.66927C14.9987 9.45427 14.361 11.0903 13.3009 12.362L16.2748 15.3359L15.332 16.2787L12.3581 13.3048C11.0864 14.3649 9.45037 15.0026 7.66536 15.0026C3.61528 15.0026 0.332031 11.7193 0.332031 7.66927C0.332031 3.6192 3.61528 0.335938 7.66536 0.335938C8.16155 0.335938 8.64623 0.385219 9.11477 0.479151C9.1078 0.496174 9.10092 0.512994 9.09412 0.529594L9.09382 0.530325L9.08727 0.546327C8.69388 0.709466 8.17478 0.924994 7.74949 1.12293C7.53815 1.22129 7.29247 1.34158 7.08114 1.46837C6.99088 1.52252 6.83908 1.61761 6.6845 1.74905C3.83738 2.21722 1.66536 4.68961 1.66536 7.66927C1.66536 10.983 4.35166 13.6693 7.66536 13.6693C10.8776 13.6693 13.5002 11.145 13.6579 7.97196C13.7745 7.77144 13.8862 7.54073 13.9788 7.33992C14.1716 6.92204 14.3836 6.4098 14.5454 6.01873L14.5457 6.01788Z" fill="#000311"></path>
+                        </svg>
+                        <svg class="four_point_star" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.84784 5.89358C4.51371 6.70116 4.04756 7.82786 3.90259 7.82608C3.7661 7.82441 3.33848 6.75865 3.01733 5.95821C2.87155 5.59488 2.74771 5.28622 2.68298 5.15655C2.54689 5.08864 2.21319 4.95673 1.82557 4.80351C1.02998 4.48902 0.00726687 4.08476 5.15125e-05 3.95982C-0.0089238 3.8044 1.15691 3.32091 1.97257 2.98265C2.29634 2.84837 2.56494 2.73698 2.68298 2.67808C2.744 2.55584 2.85981 2.27296 2.99826 1.93476C3.33027 1.12377 3.7925 -0.00530049 3.94166 1.87254e-05C4.07321 0.00471001 4.50063 1.06528 4.8234 1.86618C4.97169 2.23415 5.09791 2.54732 5.16318 2.67807C5.28397 2.73835 5.56022 2.85239 5.89114 2.98899C6.69833 3.32219 7.83084 3.78968 7.82607 3.93886C7.82184 4.07137 6.76391 4.49824 5.96676 4.81988C5.6029 4.96669 5.29337 5.09158 5.16318 5.15655C5.10238 5.27835 4.98647 5.5585 4.84784 5.89358Z" fill="#335BFF"></path>
+                        </svg>
+                    </div>
+                    <div class="new_search_guide_bub_container_center">即刻体验 AI 搜索 DeepSeek-R1 满血版</div>
+                    <div class="new_search_guide_bub_container_right"><i class="cos-icon cos-icon-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+
+		</section>
+		<section class="intro">
+			<span class="tips">Tips</span>
+			<p>✅ “site”——在特定网站或域中搜索 ；例如：site:网址 关键词 或 关键词 site:网址</p>
+			<p>✅（“”）双引号——精确匹配 ；例如：“数智搜索”。</p>
+			<p>✅ “+”加号 —— 强制包含关键词 ；例如：+数字素养+技能+学习。</p>
+			<p>✅ “intitle”——把搜索范围限定在网页标题中 ；例如：intitle:数智标签页。</p>
+		</section>
+		<section class="dlcnads">
+		        <a href="https://s.diglit.cn" target="_blank">
+		            <img src="https://s.diglit.cn/mly/images/shuzhisousuo.png">
+		        </a>
+		    </section>
+		<script type="text/javascript">
+			// document.onkeydown=keyDownSearch; 
+			document.getElementById('tijiao').onkeydown = keyDownSearch;
+
+			function keyDownSearch(e) {
+				var theEvent = e || window.event;
+				var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+				if (code == 13) {
+					dlcn();
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</body>
+</html>

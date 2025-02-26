@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="GitHub 搜索,GitHub search,代码检索">
+		<link rel="icon" href="/mly/images/VlrZgH.png">
+		<title>古藤堡 搜索</title>
+		<style type="text/css">
+			body {
+				text-align: center;
+				height: 100%;
+				background-color: #fff;
+			}
+
+			.logo {
+				width: 100px;
+				border-radius: 50px;
+				margin: 9% auto 30px
+			}
+
+			input[type=submit],
+			input[type=button] {
+				display: inline-block;
+				color: #fff;
+				background-color: #ad0100;
+				border-radius: 0px;
+				height: 40px;
+				line-height: 27px;
+				font-family: Arial, Microsoft YaHei;
+				font-size: 16px;
+				padding: 0 20px;
+				border: none;
+				cursor: pointer;
+				letter-spacing: 1px
+			}
+
+			input[type=text] {
+				float: left;
+				width: 500px;
+				height: 32px;
+				color: #333;
+				padding: 3px 10px;
+				margin-bottom: 30px;
+				border: 1px solid #ad0100;
+				border-right: 0;
+				font-size: 16px;
+				outline: 0;
+				background-color: #FFF;
+			}
+
+			#dlcn-search {
+				display: block;
+				width: 618px;
+				margin: 0 auto
+			}
+
+			.intro {
+				display: block;
+				width: 572px;
+				margin: 0px auto;
+				color: #607D8B;
+				font-size: 12px;
+				text-align: left;
+				background-color: #f3f3f3;
+				clear: both;
+				border-left: 5px solid #607D8B;
+				padding: 10px 20px;
+			}
+			.dlcnads {
+			    width: auto;
+			    margin: 20px auto;
+			    display: flex;
+			    justify-content: center;
+			    gap: 20px;
+			}
+			 .dlcnads img {
+			    width: 610px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<img class="logo" title="Search Project Gutenberg" src="https://s.diglit.cn/mly/images/VlrZgH.png">
+		<section class="search" id="dlcn-search">
+			<div class="middle" id="tijiao">
+				<input name="" type="text" id="dlcn" value="" placeholder="Press enter to search on Gutenberg."
+					autocomplete="off">
+				<input type="submit" value="Search" onclick="dlcn()"> </input>
+				<script type="text/javascript">
+					function dlcn() {
+						var s = document.getElementById('dlcn').value;
+						window.open("https://www.gutenberg.org/ebooks/search/?query=" + s, "_blank");
+					}
+				</script>
+			</div>
+
+		</section>
+		<section class="intro">
+			<p>其中主要是西方文化传统中的文学作品，比如小说、诗歌、小故事、戏剧，除此之外，PG也收录食谱、书目以及期刊。另外还包括一些非文本内容，比如音频文件、乐谱文件等。</p>
+			<p>收录中主要是英文作品，但也有相当数量的德语、法语、意大利语、西班牙语、荷兰语、芬兰语以及中文等不同语言的著作。</p>
+		</section>
+<section class="dlcnads">
+		        <a href="https://s.diglit.cn" target="_blank">
+		            <img src="https://s.diglit.cn/mly/images/shuzhisousuo.png">
+		        </a>
+		    </section>
+			
+		<script type="text/javascript">
+			// document.onkeydown=keyDownSearch; 
+			document.getElementById('tijiao').onkeydown = keyDownSearch;
+
+			function keyDownSearch(e) {
+				var theEvent = e || window.event;
+				var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+				if (code == 13) {
+					dlcn();
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</body>
+</html>
